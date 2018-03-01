@@ -14,6 +14,6 @@ class MainPresenterImpl<in V : MainView> : MainPresenter<V> {
     }
 
     override fun setToastText(text : String) {
-        view?.displayToast("You have been clicked")
+        view?.displayToastLaunchARcoreActivity(text)
     }
 }

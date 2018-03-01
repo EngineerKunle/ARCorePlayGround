@@ -4,5 +4,5 @@ import teamkunle.co.uk.arcoreplayground.base.BaseView
 
 
 interface MainView : BaseView {
-    fun displayToast(text : String)
+    fun displayToastLaunchARcoreActivity(text : String)
 }
