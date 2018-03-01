@@ -21,7 +21,7 @@ import teamkunle.co.uk.arcoreplayground.utils.ShaderUtils;
 
 /**
  * This class renders the AR background from camera feed. It creates and hosts the texture given to
- * ARCore to be filled with the camera image.
+ * ARCoreActivity to be filled with the camera image.
  */
 public class BackgroundRenderer {
     private static final String TAG = BackgroundRenderer.class.getSimpleName();
