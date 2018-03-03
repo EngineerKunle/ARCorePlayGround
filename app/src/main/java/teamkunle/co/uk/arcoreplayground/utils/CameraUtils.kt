@@ -10,8 +10,8 @@ import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat
 
 const val  cameraPermission = Manifest.permission.CAMERA
-const val cameraPermissionCode = 1
-object CameraUtils {
+const val cameraPermissionCode = 2000
+object  CameraUtils {
 
     fun hasCameraPermission(activity: Activity) : Boolean {
         return ContextCompat.checkSelfPermission(activity, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED

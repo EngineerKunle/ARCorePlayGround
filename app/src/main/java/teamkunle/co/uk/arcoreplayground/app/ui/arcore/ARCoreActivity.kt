@@ -2,8 +2,11 @@ package teamkunle.co.uk.arcoreplayground.app.ui.arcore
 
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_arcore.*
 import teamkunle.co.uk.arcoreplayground.R
 import teamkunle.co.uk.arcoreplayground.base.BaseActivity
+import teamkunle.co.uk.arcoreplayground.utils.CameraUtils
 
 class ARCoreActivity : BaseActivity(), ARCoreView {
 
@@ -17,12 +20,27 @@ class ARCoreActivity : BaseActivity(), ARCoreView {
 
     override fun onResume() {
         super.onResume()
-//        custom_surface_view.onResume()
+        if (!CameraUtils.hasCameraPermission(this)) {
+            CameraUtils.requestCameraPermission(this)
+            return
+        }
+        custom_surface_view.onResume()
     }
 
     override fun onPause() {
         super.onPause()
-//        custom_surface_view.onPause()
+        custom_surface_view.onPause()
+    }
+
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+        if(!CameraUtils.hasCameraPermission(this)) {
+            Toast.makeText(this, "This app needs to use Camera permission ", Toast.LENGTH_LONG).show()
+
+            if (!CameraUtils.shouldRequestCameraPermission(this)) {
+                CameraUtils.launchPermissionSettings(this)
+            }
+            finish()
+        }
     }
 
     override fun onDestroy() {
