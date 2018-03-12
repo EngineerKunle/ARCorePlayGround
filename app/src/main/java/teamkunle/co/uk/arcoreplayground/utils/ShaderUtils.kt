@@ -31,6 +31,14 @@ class ShaderUtils {
             return shader
         }
 
+        fun loaderShader(type : Int, shaderCode : String) : Int {
+
+            var shader : Int = GLES20.glCreateShader(type)
+            GLES20.glShaderSource(shader, shaderCode)
+            GLES20.glCompileShader(shader)
+            return shader
+        }
+
         fun checkGLError(tag : String, label : String) {
             var lastError = GLES20.GL_NO_ERROR
             var error = GLES20.glGetError()

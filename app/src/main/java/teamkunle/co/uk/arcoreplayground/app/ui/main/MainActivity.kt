@@ -6,7 +6,7 @@ import android.util.Log
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import teamkunle.co.uk.arcoreplayground.R
-import teamkunle.co.uk.arcoreplayground.app.ui.arcore.ARCoreActivity
+import teamkunle.co.uk.arcoreplayground.app.ui.cameradraw.CameraDrawActivity
 import teamkunle.co.uk.arcoreplayground.base.BaseActivity
 
 class MainActivity : BaseActivity(), MainView {
@@ -33,7 +33,7 @@ class MainActivity : BaseActivity(), MainView {
 
     override fun displayToastLaunchARcoreActivity(text : String) {
         Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
-        val intent = Intent(this, ARCoreActivity::class.java)
+        val intent = Intent(this, CameraDrawActivity::class.java)
         startActivity(intent)
     }
 

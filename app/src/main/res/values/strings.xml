@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">ARCorePlayGround</string>
-    <string name="click_me">click me</string>
+    <string name="open_camera_draw">Camera Draw</string>
 </resources>

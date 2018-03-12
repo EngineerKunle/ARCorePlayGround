@@ -17,6 +17,7 @@ class CustomSurfaceView(context : Context?, attr : AttributeSet?) : GLSurfaceVie
         renderMode = RENDERMODE_CONTINUOUSLY
     }
 
+
     override fun onTouchEvent(event: MotionEvent?): Boolean {
         return super.onTouchEvent(event)
     }

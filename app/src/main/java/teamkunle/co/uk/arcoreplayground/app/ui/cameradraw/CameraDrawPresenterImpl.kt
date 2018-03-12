@@ -1,9 +1,9 @@
-package teamkunle.co.uk.arcoreplayground.app.ui.arcore
+package teamkunle.co.uk.arcoreplayground.app.ui.cameradraw
 
 import teamkunle.co.uk.arcoreplayground.base.BasePresenter
 
 
-class ARCorePresenterImpl<in V : ARCoreView> : BasePresenter<V>{
+class CameraDrawPresenterImpl<in V : CameraDrawView> : BasePresenter<V>{
 
     private var view : V? = null
 

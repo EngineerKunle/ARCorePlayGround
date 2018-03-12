@@ -20,7 +20,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".app.ui.arcore.ARCoreActivity" android:theme="@style/NoBarTheme"></activity>
+        <activity android:name=".app.ui.cameradraw.CameraDrawActivity" android:theme="@style/NoBarTheme"></activity>
 
         <meta-data android:name="com.google.ar.core" android:value="required" />
     </application>

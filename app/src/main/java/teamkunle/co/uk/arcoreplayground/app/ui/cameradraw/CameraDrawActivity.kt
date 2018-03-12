@@ -1,4 +1,4 @@
-package teamkunle.co.uk.arcoreplayground.app.ui.arcore
+package teamkunle.co.uk.arcoreplayground.app.ui.cameradraw
 
 import android.os.Bundle
 import android.util.Log
@@ -15,10 +15,10 @@ import teamkunle.co.uk.arcoreplayground.R
 import teamkunle.co.uk.arcoreplayground.base.BaseActivity
 import teamkunle.co.uk.arcoreplayground.utils.CameraUtils
 
-class ARCoreActivity : BaseActivity(), ARCoreView {
+class CameraDrawActivity : BaseActivity(), CameraDrawView {
 
-    private val tag = ARCoreActivity::class.simpleName
-    private val presenter = ARCorePresenterImpl<ARCoreView>()
+    private val tag = CameraDrawActivity::class.simpleName
+    private val presenter = CameraDrawPresenterImpl<CameraDrawView>()
 
     private var userRequestInstall : Boolean = false
     private  var session : Session? = null
