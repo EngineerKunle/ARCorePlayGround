@@ -34,6 +34,11 @@ class CameraDrawActivity : BaseActivity(), CameraDrawView {
     override fun onResume() {
         super.onResume()
 
+        if (!CameraUtils.hasCameraPermission(this)) {
+            CameraUtils.requestCameraPermission(this)
+            return
+        }
+
         if(session == null) {
 
             var exception : Exception? = null
@@ -65,11 +70,6 @@ class CameraDrawActivity : BaseActivity(), CameraDrawView {
 
             message?.let {
                 Log.e(tag, "Exception creating session ", exception)
-                return
-            }
-
-            if (!CameraUtils.hasCameraPermission(this)) {
-                CameraUtils.requestCameraPermission(this)
                 return
             }
         }

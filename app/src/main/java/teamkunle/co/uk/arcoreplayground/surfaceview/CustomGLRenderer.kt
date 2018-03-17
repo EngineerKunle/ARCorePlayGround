@@ -24,6 +24,7 @@ class CustomGLRenderer : GLSurfaceView.Renderer {
 
     override fun onDrawFrame(unused: GL10?) {
         GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT)
+        triangle.draw()
     }
 
     override fun onSurfaceChanged(unsued: GL10?, width: Int, height: Int) {
