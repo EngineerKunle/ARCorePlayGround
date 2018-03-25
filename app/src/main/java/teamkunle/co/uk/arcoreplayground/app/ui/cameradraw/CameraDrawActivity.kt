@@ -33,7 +33,7 @@ class CameraDrawActivity : BaseActivity(), CameraDrawView {
 
         userRequestInstall = false
         cameraPreview = CameraPreview(this)
-        cameraPreview.initCamera()
+        cameraPreview.initCamera(this)
     }
 
     override fun onResume() {
