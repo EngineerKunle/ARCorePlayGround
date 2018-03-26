@@ -13,12 +13,9 @@ import com.google.ar.core.exceptions.UnavailableUserDeclinedInstallationExceptio
 import kotlinx.android.synthetic.main.activity_arcore.*
 import teamkunle.co.uk.arcoreplayground.R
 import teamkunle.co.uk.arcoreplayground.base.BaseActivity
-import teamkunle.co.uk.arcoreplayground.surfaceview.CameraPreview
 import teamkunle.co.uk.arcoreplayground.utils.CameraUtils
 
 class CameraDrawActivity : BaseActivity(), CameraDrawView {
-
-    private lateinit var cameraPreview :  CameraPreview
 
     private val tag = CameraDrawActivity::class.simpleName
     private val presenter = CameraDrawPresenterImpl<CameraDrawView>()
@@ -37,7 +34,6 @@ class CameraDrawActivity : BaseActivity(), CameraDrawView {
         presenter.attachView(this)
 
         userRequestInstall = false
-        cameraPreview = CameraPreview(this)
     }
 
     override fun onResume() {
