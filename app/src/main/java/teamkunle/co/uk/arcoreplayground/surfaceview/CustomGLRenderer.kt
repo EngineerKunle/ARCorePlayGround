@@ -32,7 +32,7 @@ class CustomGLRenderer : GLSurfaceView.Renderer {
     }
 
     override fun onSurfaceCreated(unused: GL10?, config: EGLConfig?) {
-        GLES20.glClearColor(0.0f, 0.0f, 0.0f, 1.0f)
+        GLES20.glClearColor(0.0f, 0.0f, 0.0f, 0.0f)
 
         triangle = Triangle()
 

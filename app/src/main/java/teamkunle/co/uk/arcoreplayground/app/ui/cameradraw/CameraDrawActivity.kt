@@ -31,9 +31,13 @@ class CameraDrawActivity : BaseActivity(), CameraDrawView {
         supportActionBar?.hide()
         Log.d(tag, "on create called")
 
+    }
+
+    override fun initView() {
+        presenter.attachView(this)
+
         userRequestInstall = false
         cameraPreview = CameraPreview(this)
-        cameraPreview.initCamera(this)
     }
 
     override fun onResume() {
@@ -115,10 +119,6 @@ class CameraDrawActivity : BaseActivity(), CameraDrawView {
     override fun onDestroy() {
         presenter.detachView()
         super.onDestroy()
-    }
-
-    override fun initView() {
-        presenter.attachView(this)
     }
 
     override fun getLayOutResourcedId(): Int {
