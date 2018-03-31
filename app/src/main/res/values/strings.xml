@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">ARCorePlayGround</string>
     <string name="open_camera_draw">Camera Draw</string>
+    <string name="open_ar_core">Open AR CORE</string>
 </resources>

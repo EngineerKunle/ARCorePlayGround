@@ -26,7 +26,7 @@ class MainActivity : BaseActivity(), MainView {
 
     override fun initView() {
         presenter.attachView(this)
-        button_toast.setOnClickListener {
+        launch_camera_draw.setOnClickListener {
          presenter.setToastText("We have been clicked")
         }
     }

@@ -5,9 +5,17 @@
     android:layout_width="match_parent">
 
     <Button
-        android:id="@+id/button_toast"
+        android:id="@+id/launch_camera_draw"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/open_camera_draw"
         android:layout_centerInParent="true"/>
+
+    <Button
+        android:id="@+id/launch_ar_core"
+        android:text="@string/open_ar_core"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/launch_camera_draw"
+        android:layout_centerInParent="true" />
 </RelativeLayout>
