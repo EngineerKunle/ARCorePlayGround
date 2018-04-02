@@ -2,9 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="teamkunle.co.uk.arcoreplayground">
 
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-feature android:glEsVersion="0x00020000" android:required="true" />
-    <uses-feature android:name="android.hardware.camera.ar" android:required="true" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.ar"
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -20,9 +25,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".app.ui.cameradraw.CameraDrawActivity" android:theme="@style/NoBarTheme"></activity>
+        <activity
+            android:name=".app.ui.cameradraw.CameraDrawActivity"
+            android:theme="@style/NoBarTheme" />
 
-        <meta-data android:name="com.google.ar.core" android:value="required" />
+        <meta-data
+            android:name="com.google.ar.core"
+            android:value="required" />
+
+        <activity
+            android:name=".app.ui.ardraw.ARDraw"
+            android:label="@string/title_activity_ardraw"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
